@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.appleframework.boot</groupId>
+		<artifactId>apple-boot-dependencies</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>apple-boot-starter-parent</artifactId>
+	<name>apple-boot-starter-parent</name>
+	<url>http://maven.apache.org</url>
+	<packaging>pom</packaging>
+	
+	<properties>
+	    <apple-bom.version>1.0.0-SNAPSHOT</apple-bom.version>
+		<java.version>1.8</java.version>
+		<file.encoding>UTF-8</file.encoding>
+		<spring-boot.version>2.2.6.RELEASE</spring-boot.version>
+		<spring.version>5.2.12.RELEASE</spring.version>
+		<commons-lang3.version>3.10</commons-lang3.version>
+		<commons-collections4.version>4.4</commons-collections4.version>
+		<commons-io.version>2.6</commons-io.version>
+		<commons-codec.version>1.14</commons-codec.version>
+		<commons-net.version>3.6</commons-net.version>
+		<commons-pool2.version>2.8.0</commons-pool2.version>
+		<commons-text.version>1.8</commons-text.version>
+		<guava.version>28.2-jre</guava.version>
+		<fastjson.version>1.2.70</fastjson.version>
+		<xstream.version>1.4.12</xstream.version>
+		<mysql.connector.version>5.1.48</mysql.connector.version>
+		<baomidou.version>3.3.0</baomidou.version>
+		<sharding.version>4.1.0</sharding.version>
+		<hikaricp.version>3.2.0</hikaricp.version>
+		<hikaricp7.version>2.4.13</hikaricp7.version>
+		<aspectj.version>1.9.1</aspectj.version>
+		<lombok.version>1.18.12</lombok.version>
+		<apollo.version>1.6.1</apollo.version>
+		<druid.version>1.1.22</druid.version>
+		<p6spy.version>3.9.0</p6spy.version>
+		<mybatis.generator.version>1.4.0</mybatis.generator.version>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<httpasyncclient.version>4.1.4</httpasyncclient.version>
+		<mapstruct.version>1.2.0.Final</mapstruct.version>
+		<p6spy.version>3.9.1</p6spy.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-dependencies</artifactId>
+				<version>${apple-bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-bom</artifactId>
+				<version>${apple-bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- 统一管理Spring依赖
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			-->
+			<!--通过Spring Boot管理其他第三方版本 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+					
+			<dependency>
+				<groupId>com.ctrip.framework</groupId>
+				<artifactId>apollo-core</artifactId>
+				<version>${apollo.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ctrip.framework</groupId>
+				<artifactId>apollo-client</artifactId>
+				<version>${apollo.version}</version>
+			</dependency>
+			
+			<!-- sharding-jdbc -->
+			<dependency>
+				<groupId>org.apache.shardingsphere</groupId>
+				<artifactId>sharding-jdbc-core</artifactId>
+				<version>${sharding.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.apache.shardingsphere</groupId>
+						<artifactId>sharding-core-parse-oracle</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.apache.shardingsphere</groupId>
+						<artifactId>sharding-core-parse-sqlserver</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.apache.shardingsphere</groupId>
+						<artifactId>sharding-core-parse-postgresql</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shardingsphere</groupId>
+				<artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+				<version>${sharding.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shardingsphere</groupId>
+				<artifactId>sharding-jdbc-spring-namespace</artifactId>
+				<version>${sharding.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${hikaricp.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP-java7</artifactId>
+				<version>${hikaricp7.version}</version>
+			</dependency>
+
+			<dependency>
+				<artifactId>p6spy</artifactId>
+				<groupId>p6spy</groupId>
+				<version>${p6spy.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<!-- mybatis -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus</artifactId>
+				<version>${baomidou.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${baomidou.version}</version>
+			</dependency>
+
+			<!-- lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+
+			<!-- apache commons start -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>${commons-collections4.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${commons-codec.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-net</groupId>
+				<artifactId>commons-net</artifactId>
+				<version>${commons-net.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-pool2</artifactId>
+				<version>${commons-pool2.version}</version>
+			</dependency>
+			<!-- apache commons end -->
+
+			<!-- tools -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-core</artifactId>
+				<version>${mybatis.generator.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- springcloud -->
+			<dependency>
+				<groupId>com.thoughtworks.xstream</groupId>
+				<artifactId>xstream</artifactId>
+				<version>${xstream.version}</version>
+			</dependency>
+			<!-- mapstruct -->
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-jdk8</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>p6spy</groupId>
+				<artifactId>p6spy</artifactId>
+				<version>${p6spy.version}</version>
+			</dependency>
+			
+			<!-- http client async -->
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpasyncclient</artifactId>
+				<version>${httpasyncclient.version}</version>
+			</dependency>
+			
+			<!-- aspectj -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${file.encoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<encoding>${file.encoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.7.2</version>
+				<configuration>
+					<forkMode>once</forkMode>
+					<argLine>-Dfile.encoding=${file.encoding}</argLine>
+					<systemProperties>
+						<property>
+							<name>net.sourceforge.cobertura.datafile</name>
+							<value>target/cobertura/cobertura.ser</value>
+						</property>
+					</systemProperties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.appleframework</groupId>
+		<artifactId>apple-bom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.appleframework.boot</groupId>
+	<artifactId>apple-boot-dependencies</artifactId>
+	<name>apple-boot-dependencies</name>
+	<packaging>pom</packaging>
+	<description>Apple Boot Dependencies</description>
+	<url>https://projects.spring.io/spring-boot/#</url>
+
+	<properties>
+		<micrometer.version>1.5.2</micrometer.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-bom</artifactId>
+				<version>${micrometer.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<modules>
+		<module>apple-boot-starter-parent</module>
+	</modules>
+	
+</project>

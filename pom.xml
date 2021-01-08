@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.appleframework</groupId>
+	<artifactId>apple-bom</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>apple-bom</name>
+	<url>http://maven.appleframework.com</url>
+
+	<modules>
+		<module>apple-boot-bom</module>
+		<module>apple-boot-dependencies</module>
+	</modules>
+
+	<distributionManagement>
+		<repository>
+			<id>apple-releases</id>
+			<url>http://nexus3.appleframework.com:8081/repository/apple-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>apple-snapshots</id>
+			<url>http://nexus3.appleframework.com:8081/repository/apple-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

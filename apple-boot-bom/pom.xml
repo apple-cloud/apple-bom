@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.appleframework</groupId>
+		<artifactId>apple-bom</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.appleframework.boot</groupId>
+	<artifactId>apple-boot-bom</artifactId>
+	<name>apple-boot-bom</name>
+	<packaging>pom</packaging>
+	<description>Apple Boot Dependencies</description>
+	<url>https://projects.spring.io/spring-boot/#</url>
+
+	<properties>
+		<apple.version>1.0.0-SNAPSHOT</apple.version>
+		<config.version>1.0.0-SNAPSHOT</config.version>
+		<cache.version>1.0.0-SNAPSHOT</cache.version>
+		<jms.version>1.0.0-SNAPSHOT</jms.version>
+		<orm.version>0.2.0.RELEASE</orm.version>
+		<id.version>0.1.0.RELEASE</id.version>
+		<data.version>0.1.2.RELEASE</data.version>
+		<event.version>0.0.4.RELEASE</event.version>
+		<async.version>0.0.3.RELEASE</async.version>
+		<binlog.version>0.2.3.RELEASE</binlog.version>
+		
+		<java.version>1.8</java.version>
+		<file.encoding>UTF-8</file.encoding>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<!-- apple -->
+			<dependency>
+				<groupId>com.appleframework</groupId>
+				<artifactId>apple-commons</artifactId>
+				<version>${apple.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework</groupId>
+				<artifactId>apple-test</artifactId>
+				<version>${apple.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework</groupId>
+				<artifactId>apple-web</artifactId>
+				<version>${apple.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework</groupId>
+				<artifactId>apple-launcher</artifactId>
+				<version>${apple.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework</groupId>
+				<artifactId>apple-context</artifactId>
+				<version>${apple.version}</version>
+			</dependency>
+			
+			<!-- config -->
+			<dependency>
+				<groupId>com.appleframework.config</groupId>
+				<artifactId>apple-config-apollo</artifactId>
+				<version>${config.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.config</groupId>
+				<artifactId>apple-config-core</artifactId>
+				<version>${config.version}</version>
+			</dependency>
+
+			<!-- boot -->
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-java</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-config</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-spring</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-jetty8</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-jetty9</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-tomcat8</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.boot</groupId>
+				<artifactId>apple-boot-tomcat9</artifactId>
+				<version>${boot.version}</version>
+			</dependency>
+
+			<!-- cache -->
+			<dependency>
+				<groupId>com.appleframework.cache</groupId>
+				<artifactId>apple-cache-core</artifactId>
+				<version>${cache.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.cache</groupId>
+				<artifactId>apple-cache-hazelcast</artifactId>
+				<version>${cache.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.cache</groupId>
+				<artifactId>apple-cache-jedis</artifactId>
+				<version>${cache.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.cache</groupId>
+				<artifactId>apple-cache-ehcache</artifactId>
+				<version>${cache.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.cache</groupId>
+				<artifactId>apple-cache-redisson</artifactId>
+				<version>${cache.version}</version>
+			</dependency>
+			
+			<!-- orm -->
+			<dependency>
+				<groupId>com.appleframework.orm</groupId>
+				<artifactId>apple-orm-mybatis</artifactId>
+				<version>${orm.version}</version>
+			</dependency>
+
+			<!-- id -->
+			<dependency>
+				<groupId>com.appleframework.id</groupId>
+				<artifactId>apple-id-snowflake</artifactId>
+				<version>${id.version}</version>
+			</dependency>
+
+			<!-- data -->
+			<dependency>
+				<groupId>com.appleframework.data</groupId>
+				<artifactId>apple-data-hbase1x</artifactId>
+				<version>${data.version}</version>
+			</dependency>
+			
+			<!-- event -->
+			<dependency>
+				<groupId>com.appleframework.event</groupId>
+				<artifactId>apple-event-spring</artifactId>
+				<version>${event.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.appleframework.event</groupId>
+				<artifactId>apple-event-kafka</artifactId>
+				<version>${event.version}</version>
+			</dependency>
+
+			<!-- jms -->
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-core</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-kafka</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-springkafka</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-rabbitmq</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-jedis</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-eventbus</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.jms</groupId>
+				<artifactId>apple-jms-datacarrier</artifactId>
+				<version>${jms.version}</version>
+			</dependency>
+
+			<!-- async -->
+			<dependency>
+				<groupId>com.appleframework.async</groupId>
+				<artifactId>apple-async</artifactId>
+				<version>${async.version}</version>
+			</dependency>
+			
+			<!-- binlog -->
+			<dependency>
+			  	<groupId>com.appleframework.binlog</groupId>
+			  	<artifactId>apple-binlog-core</artifactId>
+			  	<version>${binlog.version}</version>
+			</dependency>
+			
+			<dependency>
+			  	<groupId>com.appleframework.binlog</groupId>
+			  	<artifactId>apple-binlog-zk</artifactId>
+			  	<version>${binlog.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+		
+</project>
