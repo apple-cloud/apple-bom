@@ -39,7 +39,6 @@
 		<lombok.version>1.18.12</lombok.version>
 		<apollo.version>1.6.1</apollo.version>
 		<druid.version>1.1.22</druid.version>
-		<p6spy.version>3.9.0</p6spy.version>
 		<mybatis.generator.version>1.4.0</mybatis.generator.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -247,13 +246,7 @@
 				<artifactId>mapstruct-processor</artifactId>
 				<version>${mapstruct.version}</version>
 			</dependency>
-
-			<dependency>
-				<groupId>p6spy</groupId>
-				<artifactId>p6spy</artifactId>
-				<version>${p6spy.version}</version>
-			</dependency>
-			
+						
 			<!-- http client async -->
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
