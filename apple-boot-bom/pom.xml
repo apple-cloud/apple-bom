@@ -59,6 +59,11 @@
 				<artifactId>apple-context</artifactId>
 				<version>${apple.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.appleframework</groupId>
+				<artifactId>apple-distributed</artifactId>
+				<version>${apple.version}</version>
+			</dependency>
 			
 			<!-- config -->
 			<dependency>
