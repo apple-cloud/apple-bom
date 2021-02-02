@@ -74,6 +74,12 @@
 			
 			<dependency>
 				<groupId>com.appleframework.config</groupId>
+				<artifactId>apple-config-diamond</artifactId>
+				<version>${config.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.config</groupId>
 				<artifactId>apple-config-core</artifactId>
 				<version>${config.version}</version>
 			</dependency>
