@@ -80,6 +80,12 @@
 			
 			<dependency>
 				<groupId>com.appleframework.config</groupId>
+				<artifactId>apple-config-springboot</artifactId>
+				<version>${config.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.appleframework.config</groupId>
 				<artifactId>apple-config-core</artifactId>
 				<version>${config.version}</version>
 			</dependency>
